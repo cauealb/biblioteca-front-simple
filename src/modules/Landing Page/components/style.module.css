@@ -1,0 +1,22 @@
+.style {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    background-color: white;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    padding: 0.6rem;
+    transition: 0.3s;
+
+    span {
+        display: flex;
+    }
+
+    &:hover {
+        span {
+            transform: translateY(-130);
+        }
+    }
+}

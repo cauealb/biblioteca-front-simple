@@ -1,4 +1,5 @@
 import logo from '../../../assets/logo.png'
+import { ButtonCta } from '../components/ButtonCta'
 import style from './style.module.css'
 
 export default function LadingPage() {
@@ -18,7 +19,7 @@ export default function LadingPage() {
                 </div>
 
                 <div>
-                    <button>Get started</button>
+                    <ButtonCta title='Get Started' />
                 </div>
             </header>
             <main>
