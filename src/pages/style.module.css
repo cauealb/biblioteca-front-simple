@@ -1,0 +1,55 @@
+.card {
+    display: grid;
+    gap: 1rem;
+    background-color: #fafafa;
+    margin: auto;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 2px 2px #d9d9d9;
+    padding: 1rem;
+
+    h1 {
+        text-align: center;
+        padding-bottom: 1rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+}
+
+.inputs {
+    display: grid;
+    gap: 0.7rem;
+
+    label {
+        display: grid;
+        gap: 0.3rem;
+        font-size: 0.8rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    input {
+        border: 1px solid #c9c9c9;
+        border-radius: 6px;
+        padding: 0.2rem;
+        font-size: 1.1rem;
+    }
+}
+
+.btn {
+    /* background-color: #6666ff; */
+    border: none;
+    padding-inline: 1.3rem;
+    padding-block: 0.3rem;
+    font-size: 1.2rem;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+    background: linear-gradient(to bottom, #6666ff, #aaaaff);
+
+
+    &:hover {
+        transform: scale(1.03);
+        box-shadow: 2px 2px #c9c9c9;
+        background-color: #aaaaff;
+    }
+}
