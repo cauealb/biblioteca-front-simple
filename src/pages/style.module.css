@@ -1,17 +1,19 @@
 .card {
     display: grid;
-    gap: 1rem;
-    background-color: #fafafa;
-    margin: auto;
-    max-width: 400px;
+    max-width: 300px;
     border-radius: 8px;
-    box-shadow: 2px 2px #d9d9d9;
     padding: 1rem;
-
+    color: white;
+    margin-left: 4rem;
+    
     h1 {
         text-align: center;
-        padding-bottom: 1rem;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    
+    p {
+        text-decoration: underline;
+        cursor: pointer;
     }
 }
 
@@ -35,7 +37,7 @@
 }
 
 .btn {
-    /* background-color: #6666ff; */
+    background-color: #6666ff;
     border: none;
     padding-inline: 1.3rem;
     padding-block: 0.3rem;
@@ -44,7 +46,6 @@
     font-weight: bold;
     cursor: pointer;
     transition: 0.2s;
-    background: linear-gradient(to bottom, #6666ff, #aaaaff);
 
 
     &:hover {
@@ -52,4 +53,16 @@
         box-shadow: 2px 2px #c9c9c9;
         background-color: #aaaaff;
     }
+}
+
+.byMe {
+    color: white;
+    justify-self: center;
+    align-content: flex-end;
+}
+
+a {
+    text-decoration: underline;
+    cursor: pointer;
+    color: white;
 }
