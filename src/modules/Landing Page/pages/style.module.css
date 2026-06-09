@@ -31,7 +31,7 @@
 
 .divMain {
     text-align: center;
-    /* background-color: yellow; */
+    display: grid;
 
     h1 {
         font-size: 3.5rem;
@@ -47,7 +47,9 @@
         -webkit-text-fill-color: transparent;
     }
 
-    div {
+    & > div {
+        display: grid;
+        gap: 1rem;
         font-family: 'Inter', sans-serif;
     }
 }
@@ -62,7 +64,6 @@
 
 .btn {
     display: flex;
-    /* background-color: yellow; */
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
@@ -84,6 +85,7 @@
     }
     
     button {
+        color: #c4c4c4;
         padding-inline: 1rem;
         padding-block: 0.5rem;
         border-radius: 6px;
