@@ -53,8 +53,8 @@
 }
 
 .mainDescription {
-    margin: auto;
     background: linear-gradient(to right, white, #c4c4c4);
+    margin: auto;
     background-clip: text;
     color: transparent;
     width: 500px;
@@ -62,15 +62,41 @@
 
 .btn {
     display: flex;
-    background-color: yellow;
+    /* background-color: yellow; */
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
-
+    
     div {
+        background: linear-gradient(to right, white, #c4c4c4);
+        background-clip: text;
+        color: transparent;
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 0.5rem;
+        cursor: pointer;
+        transition: 0.2s ease;
+        
+        &:hover {
+            transform: translateY(-2px);
+        }
+    }
+    
+    button {
+        padding-inline: 1rem;
+        padding-block: 0.5rem;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+        transition: 0.2s ease;
+        background: linear-gradient(135deg,#4f46e5,#7c3aed);
+        box-shadow: 0 0 20px rgba(79, 70, 229, 0.6), 0 0 40px rgba(79, 70, 229, 0.3);
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 2px black;
+        }
+
     }
 }
