@@ -29,3 +29,13 @@
         }
     }
 }
+
+.divMain {
+    text-align: center;
+    background-color: yellow;
+
+}
+
+.main {
+    font-size: 2rem;
+}

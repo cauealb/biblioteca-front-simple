@@ -1,5 +1,6 @@
+import { IoPlayCircle } from 'react-icons/io5'
 import logo from '../../../assets/logo.png'
-import { ButtonCta } from '../components/ButtonCta'
+import { ButtonCta } from '../components/ButtonCta/ButtonCta'
 import style from './style.module.css'
 
 export default function LadingPage() {
@@ -22,9 +23,19 @@ export default function LadingPage() {
                     <ButtonCta title='Get Started' />
                 </div>
             </header>
-            <main>
-                <h1>teste</h1>
-            </main>
+            <div className={style.divMain}>
+                <h1 className={style.main}>Enhance your book organization with SaaS models.</h1>
+                <div>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. A qui hic, cum consequuntur ratione nesciunt!
+                    <div>
+                        <button>Get Started</button>
+                        <div>
+                            <IoPlayCircle color='white' />
+                            <p>Learn more</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </>
     )
 }
