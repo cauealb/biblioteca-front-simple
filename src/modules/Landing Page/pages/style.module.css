@@ -2,7 +2,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #3b3b3b;
     margin-inline: 1rem;
 
     img {
@@ -32,10 +31,28 @@
 
 .divMain {
     text-align: center;
-    background-color: yellow;
+    /* background-color: yellow; */
 
+    h1 {
+        font-size: 3.5rem;
+        font-family: 'Space Grotesk', sans-serif;
+        /* color: #c4c4c4 */
+
+        background: linear-gradient(to right, white, #c4c4c4);
+
+        background-clip: text;
+        -webkit-background-clip: text;
+
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+    }
 }
 
-.main {
-    font-size: 2rem;
+.mainDescription {
+    margin: auto;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(to right, white, #c4c4c4);
+    background-clip: text;
+    color: transparent;
+    width: 500px;
 }

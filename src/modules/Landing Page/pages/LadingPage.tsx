@@ -26,8 +26,8 @@ export default function LadingPage() {
             <div className={style.divMain}>
                 <h1 className={style.main}>Enhance your book organization with SaaS models.</h1>
                 <div>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. A qui hic, cum consequuntur ratione nesciunt!
-                    <div>
+                    <p className={style.mainDescription}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A qui hic, cum consequuntur ratione nesciunt!</p>
+                    <div className={style.btn}>
                         <button>Get Started</button>
                         <div>
                             <IoPlayCircle color='white' />
