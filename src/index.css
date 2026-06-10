@@ -15,3 +15,11 @@ body {
 * {
   outline: none;
 }
+
+h1 {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+p {
+  font-family: 'Inter', sans-serif;
+}

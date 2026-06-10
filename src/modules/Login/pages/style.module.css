@@ -10,14 +10,20 @@
     
     h1 {
         text-align: center;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
     
     p {
         text-decoration: underline;
         cursor: pointer;
-        font-size: 1.1rem;
+        font-size: 0.9rem;
+        transition: all 0.2s;
+
     }
+}
+
+.forgotPassword:hover, .noAccont:hover {
+    color: rgb(204, 204, 204);
+    text-decoration: none; 
 }
 
 .logo {
@@ -45,33 +51,16 @@
     }
 }
 
-.btn {
-    background-color: #6666ff;
-    border: none;
-    font-size: 1.2rem;
-    border-radius: 6px;
-    font-weight: bold;
+a {
+    text-decoration: underline;
     cursor: pointer;
-    transition: 0.2s all;
-
-    &:hover {
-        transform: scale(1.03);
-        box-shadow: 2px 2px #c9c9c9;
-        background-color: #aaaaff;
-        text-decoration: underline;
-    }
+    color: white;
 }
 
 .byMe {
     color: white;
     justify-self: center;
     align-content: flex-end;
-}
-
-a {
-    text-decoration: underline;
-    cursor: pointer;
-    color: white;
 }
 
 .noAccont {
