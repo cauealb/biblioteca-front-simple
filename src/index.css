@@ -3,8 +3,8 @@ body,
 #root {
   height: 100%;
   display: grid;
+  align-content: flex-start;
   /* justify-content: center; */
-  /* align-items: center; */
 }
 
 body {
