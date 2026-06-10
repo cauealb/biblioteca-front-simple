@@ -1,6 +1,7 @@
 import styles from "./style.module.css";
 import logo from '../../assets/logo.png'
 import ButtonJoin from "../../components/ButtonJoin";
+import { Link } from "react-router-dom";
 
 export default function LoginPages() {
   return (
@@ -21,7 +22,9 @@ export default function LoginPages() {
                 <p className={styles.forgotPassword}>Esqueci minha senha</p>
             </div>
             <ButtonJoin title="Entrar" />
-            <p className={styles.noAccont}>Ainda não tenho uma conta</p>
+            <Link to={"/register"}>
+                <p className={styles.noAccont}>Ainda não tenho uma conta</p>
+            </Link>
         </div>
 
         <p className={styles.byMe}>
