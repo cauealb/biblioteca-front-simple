@@ -3,6 +3,7 @@ import logo from '../../../assets/logo.png'
 import { ButtonCta } from '../components/ButtonCta/ButtonCta'
 import style from './style.module.css'
 import { Link } from 'react-router-dom'
+import stacks from '../../../assets/stacks.png' 
 
 export default function LadingPage() {
     return (
@@ -24,7 +25,7 @@ export default function LadingPage() {
                     <ButtonCta title="Get Started" />
                 </Link>
             </header>
-            <div className={style.divMain}>
+            <article className={style.divMain}>
                 <h1 className={style.main}>Enhance your book organization with SaaS models</h1>
                 <div>
                     <p className={style.mainDescription}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A qui hic, cum consequuntur ratione nesciunt!</p>
@@ -38,7 +39,17 @@ export default function LadingPage() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </article>
+            <article className={style.solutions}>
+                <div>
+                    <h2 className={style.main}>The Fastest way to manage your libary</h2>
+                    <p className={style.mainDescription}>Control books, loans, and users in a single, simple, and intuitive system.</p>
+                </div>
+                <div>
+                    <img src={stacks} alt="stacks picture" />
+                </div>
+            </article>
+            {/* TODO: Finalizar Landing Page */}
         </>
     )
 }

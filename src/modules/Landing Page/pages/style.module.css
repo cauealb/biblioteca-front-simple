@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0.8rem;
     margin-inline: 1rem;
 
     img {
@@ -96,5 +97,28 @@
             box-shadow: 0 2px black;
         }
 
+    }
+}
+
+.solutions {
+    display: flex;
+    margin-block: 6rem;
+    padding: 1rem;
+    justify-content: space-around;
+
+    & > div:first-child {
+        text-align: left;
+    }
+
+    h2 {
+        font-size: 2rem;
+        background: linear-gradient(to right, white, #c4c4c4);
+
+        background-clip: text;
+        color: transparent;
+    }
+
+    img {
+        width: 400px;
     }
 }
