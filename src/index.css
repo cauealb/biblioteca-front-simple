@@ -23,6 +23,6 @@ button {
   outline: none;
 }
 
-p {
+p, a {
   font-family: 'Inter', sans-serif;
 }

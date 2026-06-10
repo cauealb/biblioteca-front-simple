@@ -1,0 +1,32 @@
+import styles from './style.module.css'
+import { FaUser } from "react-icons/fa";
+
+export default function DashboardPages() {
+    return(
+        <>
+            <div className={styles.container}>
+                <aside className={styles.sidebar}>
+                    <div className={styles.contentuser}>
+                        <FaUser />
+                        <h2>Olá, Cauê</h2>
+                    </div>
+
+                    <nav className={styles.options}>
+                        <a href="">Dashboard</a>
+                        <a href="">Livros</a>
+                        <a href="">Bookcase</a>
+                        <a href="">Configurações</a>
+                    </nav>
+
+                    <div className={styles.exit}>
+
+                    </div>
+                </aside>
+
+                <div className={styles.content}>
+                    <h1>Conteúdo</h1>
+                </div>
+            </div>
+        </>
+    )
+}
