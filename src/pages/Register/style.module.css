@@ -1,0 +1,75 @@
+.container {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-inline: auto;
+    color: white;
+    padding: 1rem;
+    width: 330px;
+
+    h1 {
+        text-align: center;
+    }
+}
+
+.registerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.8rem;
+    flex: 1;
+    
+    img {
+        width: 70px;
+    }
+}
+
+.logo {
+    width: 70px;
+    margin-inline: auto;
+    margin-bottom: 1rem;
+}
+
+.inputs {
+    display: grid;
+    gap: 0.7rem;
+
+    label {
+        display: grid;
+        gap: 0.3rem;
+        font-size: 0.8rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    input {
+        border: 1px solid #c9c9c9;
+        border-radius: 6px;
+        padding: 0.2rem;
+        font-size: 1.1rem;
+    }
+}
+
+a {
+    text-decoration: underline;
+    cursor: pointer;
+    color: white;
+}
+
+.byMe {
+    align-self: center;
+    text-decoration: none;
+    color: white;
+}
+
+.haveAccont {
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+    text-align: center;
+}
+
+.haveAccont:hover {
+    color: rgb(204, 204, 204);
+}
