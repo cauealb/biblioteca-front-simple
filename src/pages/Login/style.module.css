@@ -1,9 +1,9 @@
-.card {
-    align-self: center;
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 330px;
-    display: grid;
-    min-width: 300px;
-    border-radius: 8px;
     padding: 1rem;
     color: white;
     margin-inline: auto;
@@ -19,6 +19,14 @@
         transition: all 0.2s;
 
     }
+}
+
+.loginContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.8rem;
+    flex: 1;
 }
 
 .forgotPassword:hover, .noAccont:hover {
@@ -58,9 +66,8 @@ a {
 }
 
 .byMe {
+    align-self: center;
     color: white;
-    justify-self: center;
-    align-content: flex-end;
 }
 
 .noAccont {
