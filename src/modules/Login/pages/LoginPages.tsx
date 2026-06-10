@@ -1,5 +1,6 @@
 import styles from './style.module.css'
 import logo from '../../../assets/logo.png'
+import ButtonJoin from '../components/ButtonJoin'
 
 export default function LoginPages() {
     return (
@@ -18,7 +19,7 @@ export default function LoginPages() {
                     </label>
                     <p className={styles.forgotPassword}>Esqueci minha senha</p>
                 </div>
-                <button className={styles.btn}>Entrar</button>
+                <ButtonJoin title='Entrar' />
                 <p className={styles.noAccont}>Ainda não tenho uma conta</p>
             </div>
 
