@@ -3,6 +3,7 @@ import styles from './style.module.css'
 import { FaUser } from "react-icons/fa";
 import { IoIosExit } from "react-icons/io";
 import ModalYesOrNo from '../../components/ModalYesOrNo';
+import { Link, Outlet } from 'react-router-dom';
 
 export default function DashboardPages() {
     const [modal, setModal] = useState<boolean>(false)
@@ -26,10 +27,15 @@ export default function DashboardPages() {
                         </div>
 
                         <nav className={styles.options}>
-                            <a href="">Dashboard</a>
-                            <a href="">Livros</a>
-                            <a href="">Bookcase</a>
-                            <a href="">Configurações</a>
+                            <Link to="/dashboard/best-books">
+                                Livros
+                            </Link>
+                            <Link to="/dashboard/my-bookcase">
+                                Bookcase
+                            </Link>
+                            <Link to="/dashboard/config">
+                                Configurações
+                            </Link>
                         </nav>
 
                     </div>
@@ -40,9 +46,9 @@ export default function DashboardPages() {
                     </div>
                 </aside>
 
-                <div className={styles.content}>
-                    <h1>Conteúdo</h1>
-                </div>
+                <main className={styles.outlet}>
+                    <Outlet />
+                </main>
             </div>
 
             <ModalYesOrNo 

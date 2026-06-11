@@ -10,7 +10,7 @@
     color: white;
 
 
-    width: 250px;
+    width: 300px;
     background: linear-gradient(135deg, #4f46e5,#7c3aed);
     box-shadow: 0 0 10px #4f46e5;
     border-top-right-radius: 16px;
@@ -53,7 +53,7 @@
     margin-top: 1.5rem;
 }
 
-.options > a {
+.options  a {
     padding: 0.5rem;
     transition: all 0.2s;
     text-decoration: none;
@@ -62,4 +62,11 @@
 .options > a:hover {
     padding-left: 1rem;
     background-color: rgba(255, 255, 255, 0.329);
+}
+
+.outlet {
+    background-color: white;
+    width: 100vw;
+    margin: 1.5rem;
+    padding: 1.5rem;
 }
