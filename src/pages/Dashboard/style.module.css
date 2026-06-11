@@ -25,15 +25,20 @@
     gap: 0.9rem;
 }
 
+.navSidebar {
+    flex: 1;
+}
+
 .exit {
     display: flex;
     justify-content: center;
     align-items: center;
-    justify-self: flex-end;
+    align-content: flex-end;
     gap: 0.8rem;
     cursor: pointer;
     padding: 0.5rem;
     transition: all 0.2s;
+    border-bottom-right-radius: 16px;
 }
 
 .exit:hover {

@@ -7,18 +7,21 @@ export default function DashboardPages() {
         <>
             <div className={styles.container}>
                 <aside className={styles.sidebar}>
-                    <div className={styles.contentuser}>
-                        <FaUser />
-                        <h2>Olá, Cauê</h2>
+                    <div className={styles.navSidebar}>
+                        <div className={styles.contentuser}>
+                            <FaUser />
+                            <h2>Olá, Cauê</h2>
+                        </div>
+
+                        <nav className={styles.options}>
+                            <a href="">Dashboard</a>
+                            <a href="">Livros</a>
+                            <a href="">Bookcase</a>
+                            <a href="">Configurações</a>
+                        </nav>
+
                     </div>
-
-                    <nav className={styles.options}>
-                        <a href="">Dashboard</a>
-                        <a href="">Livros</a>
-                        <a href="">Bookcase</a>
-                        <a href="">Configurações</a>
-                    </nav>
-
+                    
                     <div className={styles.exit}>
                         <IoIosExit size={28} />
                         <h3>Sair</h3>
