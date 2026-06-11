@@ -9,3 +9,36 @@
         border-radius: 6px;
     }
 }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th {
+    padding: 0.4rem;
+    background-color: rgb(233, 233, 233);
+    text-align: left;
+}
+
+table th:first-child {
+    border-top-left-radius: 8px;
+}
+
+table th:last-child {
+    border-top-right-radius: 8px;
+}
+
+table tr {
+    padding: 4rem;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+table tr:hover {
+    background-color: rgb(233, 233, 233);
+}
+
+table td {
+    padding: 0.4rem;
+}
