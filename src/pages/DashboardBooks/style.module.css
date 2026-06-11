@@ -1,0 +1,11 @@
+.input {
+    margin-bottom: 1.5rem;
+
+    input {
+        margin-block: 0.5rem;
+        width: 100%;
+        font-size: 1.1rem;
+        padding: 0.2rem;
+        border-radius: 6px;
+    }
+}
