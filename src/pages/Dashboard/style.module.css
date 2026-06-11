@@ -9,6 +9,7 @@
     flex-direction: column;
     color: white;
 
+
     width: 250px;
     background: linear-gradient(135deg, #4f46e5,#7c3aed);
     box-shadow: 0 0 10px #4f46e5;
@@ -20,7 +21,23 @@
     margin-top: 2rem;
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    gap: 0.9rem;
+}
+
+.exit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: flex-end;
+    gap: 0.8rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: all 0.2s;
+}
+
+.exit:hover {
+    background-color: rgba(255, 255, 255, 0.329);
 }
 
 .options {

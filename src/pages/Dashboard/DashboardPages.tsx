@@ -1,5 +1,6 @@
 import styles from './style.module.css'
 import { FaUser } from "react-icons/fa";
+import { IoIosExit } from "react-icons/io";
 
 export default function DashboardPages() {
     return(
@@ -19,7 +20,8 @@ export default function DashboardPages() {
                     </nav>
 
                     <div className={styles.exit}>
-
+                        <IoIosExit size={28} />
+                        <h3>Sair</h3>
                     </div>
                 </aside>
 
