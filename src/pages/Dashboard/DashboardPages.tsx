@@ -1,8 +1,20 @@
+import { useState } from 'react';
 import styles from './style.module.css'
 import { FaUser } from "react-icons/fa";
 import { IoIosExit } from "react-icons/io";
+import ModalYesOrNo from '../../components/ModalYesOrNo';
 
 export default function DashboardPages() {
+    const [modal, setModal] = useState<boolean>(false)
+
+    function handleModalOpen() {
+        setModal(true)
+    }
+
+    function handleModalClose() {
+        setModal(false)
+    }
+
     return(
         <>
             <div className={styles.container}>
@@ -22,7 +34,7 @@ export default function DashboardPages() {
 
                     </div>
                     
-                    <div className={styles.exit}>
+                    <div onClick={handleModalOpen} className={styles.exit}>
                         <IoIosExit size={28} />
                         <h3>Sair</h3>
                     </div>
@@ -32,6 +44,13 @@ export default function DashboardPages() {
                     <h1>Conteúdo</h1>
                 </div>
             </div>
+
+            <ModalYesOrNo 
+                header='Deseja Sair?' 
+                question='Ao selecionar em sair, seu sistema será fechado e só retornará quando fazer seu login.' 
+                modalOpen={modal}
+                isClose={handleModalClose} 
+            />
         </>
     )
 }
