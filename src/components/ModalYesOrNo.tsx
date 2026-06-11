@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styles from './style.module.css'
 
 interface ModalYesOrNoProps {
@@ -16,8 +17,10 @@ export default function ModalYesOrNo({ header, question, modalOpen, isClose }: M
                     <h1>{header}</h1>
                     <p>{question}</p>
                     <div className={styles.inputsBtn}>
-                        <button>Sim</button>
-                        <button onClick={isClose}>Não</button>
+                        <Link to="/">
+                            <button className={styles.btnYes}>Sim</button>
+                        </Link>
+                        <button className={styles.btnNo} onClick={isClose}>Não</button>
                     </div>
                 </div>
             </div>
