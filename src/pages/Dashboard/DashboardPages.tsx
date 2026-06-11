@@ -47,7 +47,7 @@ export default function DashboardPages() {
 
             <ModalYesOrNo 
                 header='Deseja Sair?' 
-                question='Ao selecionar em sair, seu sistema será fechado e só retornará quando fazer seu login.' 
+                question='Ao selecionar em sair, seu sistema será fechado e só retornará quando fazer seu login novamente.' 
                 modalOpen={modal}
                 isClose={handleModalClose} 
             />

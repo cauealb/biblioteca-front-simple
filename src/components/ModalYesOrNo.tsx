@@ -11,14 +11,16 @@ export default function ModalYesOrNo({ header, question, modalOpen, isClose }: M
     if(modalOpen) {
         return (
             <>
+            <div className={styles.modalOverlay}>
                 <div className={styles.modal}>
                     <h1>{header}</h1>
                     <p>{question}</p>
-                    <div>
-                        <button>Yes</button>
-                        <button onClick={isClose}>No</button>
+                    <div className={styles.inputsBtn}>
+                        <button>Sim</button>
+                        <button onClick={isClose}>Não</button>
                     </div>
                 </div>
+            </div>
             </>
         )
     }
