@@ -59,6 +59,11 @@
     text-decoration: none;
 }
 
+.options div {
+    display: flex;
+    gap: 0.5rem;
+}
+
 .options > a:hover {
     padding-left: 1rem;
     background-color: rgba(255, 255, 255, 0.329);
@@ -69,4 +74,10 @@
     width: 100vw;
     margin: 1.5rem;
     padding: 1.5rem;
+}
+
+.menu {
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    cursor: pointer;
 }

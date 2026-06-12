@@ -2,6 +2,10 @@ import { useState } from 'react';
 import styles from './style.module.css'
 import { FaUser } from "react-icons/fa";
 import { IoIosExit } from "react-icons/io";
+import { FaBook } from "react-icons/fa";
+import { FaSwatchbook } from "react-icons/fa6";
+import { IoSettingsSharp } from "react-icons/io5";
+import { MdMenu } from "react-icons/md";
 import ModalYesOrNo from '../../components/ModalYesOrNo';
 import { Link, Outlet } from 'react-router-dom';
 
@@ -21,6 +25,9 @@ export default function DashboardPages() {
             <div className={styles.container}>
                 <aside className={styles.sidebar}>
                     <div className={styles.navSidebar}>
+                        <div className={styles.menu}>
+                            <MdMenu size={30} />
+                        </div>
                         <div className={styles.contentuser}>
                             <FaUser />
                             <h2>Olá, Cauê</h2>
@@ -28,13 +35,22 @@ export default function DashboardPages() {
 
                         <nav className={styles.options}>
                             <Link to="/dashboard/best-books">
-                                Livros
+                                <div>
+                                    <FaBook />
+                                    Livros
+                                </div>
                             </Link>
                             <Link to="/dashboard/my-bookcase">
-                                Bookcase
+                                <div>
+                                    <FaSwatchbook />
+                                    Bookcase
+                                </div>
                             </Link>
                             <Link to="/dashboard/config">
-                                Configurações
+                                <div>
+                                    <IoSettingsSharp />
+                                    Configurações
+                                </div>
                             </Link>
                         </nav>
 
