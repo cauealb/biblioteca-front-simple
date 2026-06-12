@@ -11,6 +11,7 @@ import { Link, Outlet } from 'react-router-dom';
 
 export default function DashboardPages() {
     const [modal, setModal] = useState<boolean>(false)
+    const [expandMenu, setExpandMenu] = useState<boolean>(false)
 
     function handleModalOpen() {
         setModal(true)
@@ -20,13 +21,17 @@ export default function DashboardPages() {
         setModal(false)
     }
 
+    function handleClickMenu() {
+        setExpandMenu(prev => prev ? false : true)
+    }
+
     return(
         <>
             <div className={styles.container}>
-                <aside className={`${styles.sidebar} ${styles.sidebarCollapsed}`}>
+                <aside className={`${styles.sidebar} ${expandMenu ? styles.sidebarCollapsed : ''}`}>
                     <div className={styles.navSidebar}>
                         <div className={styles.menu}>
-                            <MdMenu size={30} />
+                            <MdMenu onClick={handleClickMenu} size={30} />
                         </div>
                         <div className={styles.contentuser}>
                             <FaUser />
