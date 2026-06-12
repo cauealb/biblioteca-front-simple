@@ -16,16 +16,20 @@
 }
 
 .sidebarCollapsed {
-    width: 50px;
+    width: 70px;
 
+    .options div {
+        padding: 0;
+        margin-inline: auto;
+    }
+    
     .contentuser {
         visibility: hidden;
     }
 
-    .options p {
+    .options p, .exit h3 {
         display: none;
     }
-
 
 }
 
