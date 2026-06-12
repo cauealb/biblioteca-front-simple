@@ -5,6 +5,7 @@ import LoginPages from "../pages/Login/LoginPages";
 import RegisterPages from "../pages/Register/RegisterPages";
 import DashboardPages from "../pages/Dashboard/DashboardPages";
 import DashboardsBooksPages from "../pages/DashboardBooks/DashboardsBooksPages";
+import MyBookcase from "../pages/MyBookcase/MyBookcase";
 
 export function AppRoutes() {
   return (
@@ -18,6 +19,11 @@ export function AppRoutes() {
           <Route 
             path="best-books"
             element={<DashboardsBooksPages />}
+          />
+
+          <Route 
+            path="my-bookcase"
+            element={<MyBookcase />}
           />
         </Route>
 
