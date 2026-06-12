@@ -21,6 +21,10 @@
     .contentuser {
         visibility: hidden;
     }
+
+    .exit h3 {
+        display: none;
+    }
 }
 
 .contentuser {

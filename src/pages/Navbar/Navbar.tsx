@@ -10,22 +10,22 @@ interface NavbarProps {
 export default function Navbar({ expandMenu }: NavbarProps) {
     return (
         <>
-            <nav className={`${styles.options} ${expandMenu ? styles.navbarCaollaped : ''}`}>
+            <nav className={`${styles.options} ${expandMenu ? styles.navbarCollapsed : ''}`}>
                 <Link to="/dashboard/best-books">
                     <div>
-                        <FaBook />
+                        <FaBook  />
                         <p>Livros</p>
                     </div>
                 </Link>
                 <Link to="/dashboard/my-bookcase">
                     <div>
-                        <FaSwatchbook />
+                        <FaSwatchbook  />
                         <p>Meus livros</p>
                     </div>
                 </Link>
                 <Link to="/dashboard/config">
                     <div>
-                        <IoSettingsSharp />
+                        <IoSettingsSharp  />
                         <p>Configurações</p>
                     </div>
                 </Link>
