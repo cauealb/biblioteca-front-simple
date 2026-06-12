@@ -23,7 +23,7 @@ export default function DashboardPages() {
     return(
         <>
             <div className={styles.container}>
-                <aside className={styles.sidebar}>
+                <aside className={`${styles.sidebar} ${styles.sidebarCollapsed}`}>
                     <div className={styles.navSidebar}>
                         <div className={styles.menu}>
                             <MdMenu size={30} />
@@ -37,19 +37,19 @@ export default function DashboardPages() {
                             <Link to="/dashboard/best-books">
                                 <div>
                                     <FaBook />
-                                    Livros
+                                    <p>Livros</p>
                                 </div>
                             </Link>
                             <Link to="/dashboard/my-bookcase">
                                 <div>
                                     <FaSwatchbook />
-                                    Bookcase
+                                    <p>Meus livros</p>
                                 </div>
                             </Link>
                             <Link to="/dashboard/config">
                                 <div>
                                     <IoSettingsSharp />
-                                    Configurações
+                                    <p>Configurações</p>
                                 </div>
                             </Link>
                         </nav>

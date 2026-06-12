@@ -17,6 +17,20 @@
     border-bottom-right-radius: 16px;
 }
 
+.sidebarCollapsed {
+    width: 50px;
+
+    .contentuser {
+        visibility: hidden;
+    }
+
+    .options p {
+        display: none;
+    }
+
+
+}
+
 .contentuser {
     margin-top: 2rem;
     display: flex;
@@ -78,6 +92,6 @@
 
 .menu {
     margin-top: 0.5rem;
-    margin-left: 1rem;
+    margin-left: 0.2rem;
     cursor: pointer;
 }
