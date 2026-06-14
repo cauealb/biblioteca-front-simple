@@ -13,7 +13,7 @@ let arr: APIProps[] = [
     {top: 3, name: "O Lado Feio do Amor", qtd: 18},
     {top: 4, name: "A Metamorfose", qtd: 18},
     {top: 5, name: "Verity", qtd: 18},
-    {top: 5, name: "Verity", qtd: 18},
+    {top: 5, name: "é ", qtd: 18},
     {top: 5, name: "Verity", qtd: 18},
     {top: 5, name: "Verity", qtd: 18},
     {top: 5, name: "Verity", qtd: 18},
@@ -52,10 +52,10 @@ export default function DashboardsBooksPages() {
         if(value === '') {
             setListBookSearch(arr)
         } else {
-            let filterArr = arr.filter(book => book.name.toLocaleLowerCase().includes(value.toLocaleLowerCase()))
+            let filterArr = arr.filter(book => book.name === value);
+
             setListBookSearch(filterArr)
         }
-        console.log(value)
     }
 
     return (
