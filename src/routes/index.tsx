@@ -6,6 +6,7 @@ import RegisterPages from "../pages/Register/RegisterPages";
 import DashboardPages from "../pages/Dashboard/DashboardPages";
 import DashboardsBooksPages from "../pages/DashboardBooks/DashboardsBooksPages";
 import MyBookcase from "../pages/MyBookcase/MyBookcase";
+import DashboardHome from "../pages/DashboardHome/DashboardHome";
 
 export function AppRoutes() {
   return (
@@ -17,6 +18,11 @@ export function AppRoutes() {
         
         <Route path="/dashboard" element={<DashboardPages />}>
           <Route 
+            index
+            element={<DashboardHome />}
+          />
+
+          <Route 
             path="best-books"
             element={<DashboardsBooksPages />}
           />
@@ -26,9 +32,6 @@ export function AppRoutes() {
             element={<MyBookcase />}
           />
         </Route>
-
-        {/* <Route path="/dashboard/my-bookcase" element={<DashboardPages />}/>
-        <Route path="/dashboard/config" element={<DashboardPages />}/> */}
       </Routes>
     </BrowserRouter>
   );
