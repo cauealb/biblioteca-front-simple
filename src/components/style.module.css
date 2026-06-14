@@ -65,7 +65,7 @@
     transition: all 0.2s;
 }
 
-.btnNo {
+.buttonPurple {
     background: linear-gradient(135deg, #4f46e5,#7c3aed);
     color: white;
 

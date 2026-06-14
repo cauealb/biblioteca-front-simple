@@ -1,6 +1,8 @@
 import { FaCircle } from 'react-icons/fa'
 import CardBook, { type CardBookProps } from '../../components/CardBook'
 import style from './style.module.css'
+import { useState } from 'react'
+import ModalOK from '../../components/ModalOK'
 
 
 let books:CardBookProps[] = [
@@ -82,6 +84,12 @@ let books:CardBookProps[] = [
 ]
 
 export default function MyBookcase() {
+    const [modalOpen, setModalOpen] = useState<boolean>(false)
+
+    function handleModalOpen() {
+        setModalOpen(true)
+    }
+
     return (
         <>
             <div className={style.container}>
@@ -94,6 +102,7 @@ export default function MyBookcase() {
                             idBook={book.idBook}
                             title={book.title}
                             read={book.read}
+                            modalOpen={handleModalOpen}
                         />
                     ))}
                 </div>
@@ -115,6 +124,10 @@ export default function MyBookcase() {
                     </div>
                 </footer>
             </div>
+
+            {/* <ModalOK 
+                title={}
+            /> */}
         </>
     )
 }

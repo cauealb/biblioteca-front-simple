@@ -20,7 +20,7 @@ export default function ModalYesOrNo({ header, question, modalOpen, isClose }: M
                         <Link to="/">
                             <button className={styles.btnYes}>Sim</button>
                         </Link>
-                        <button className={styles.btnNo} onClick={isClose}>Não</button>
+                        <button className={styles.buttonPurple} onClick={isClose}>Não</button>
                     </div>
                 </div>
             </div>
