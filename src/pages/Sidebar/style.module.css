@@ -1,62 +1,246 @@
 .container {
-    display: flex;
-    min-height: 100vh;
+  display: flex;
+  min-height: 100vh;
 }
-.sidebar {
-    display: flex;
-    flex-direction: column;
-    color: white;
-    transition: all 0.3s;
 
-    width: 250px;
-    background: linear-gradient(135deg, #4f46e5,#7c3aed);
-    box-shadow: 0 0 10px #4f46e5;
-    border-top-right-radius: 16px;
-    border-bottom-right-radius: 16px;
+.sidebar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  width: 256px;
+  min-height: 100vh;
+  padding: 1rem 0.75rem;
+  color: #f8fafc;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent 22%),
+    #15151f;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 18px 0 45px rgba(0, 0, 0, 0.22);
+  transition:
+    width 0.25s ease,
+    padding 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .sidebarCollapsed {
-    width: 70px;
-    
-    .contentuser {
-        visibility: hidden;
-    }
-
-    .exit h3 {
-        display: none;
-    }
-}
-
-.contentuser {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.9rem;
+  width: 84px;
+  padding-inline: 0.65rem;
 }
 
 .navSidebar {
-    flex: 1;
-}
-
-.exit {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: flex-end;
-    gap: 0.8rem;
-    cursor: pointer;
-    padding: 0.5rem;
-    transition: all 0.2s;
-    border-bottom-right-radius: 16px;
-}
-
-.exit:hover {
-    background-color: rgba(255, 255, 255, 0.329);
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
 }
 
 .menu {
-    margin-top: 0.5rem;
-    margin-left: 0.2rem;
-    cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 1.25rem;
+  border-radius: 8px;
+  color: #dbeafe;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.menu:hover {
+  color: #ffffff;
+  background: rgba(103, 232, 249, 0.12);
+  transform: translateY(-1px);
+}
+
+.contentuser {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  min-height: 58px;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.055);
+  overflow: hidden;
+  transition:
+    justify-content 0.25s ease,
+    padding 0.25s ease,
+    background 0.2s ease;
+}
+
+.contentuser svg {
+  flex-shrink: 0;
+  color: #67e8f9;
+  font-size: 1.15rem;
+}
+
+.contentuser h2 {
+  color: #f8fafc;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    width 0.2s ease;
+}
+
+.sidebarCollapsed .contentuser {
+  justify-content: center;
+  padding-inline: 0;
+  background: transparent;
+}
+
+.sidebarCollapsed .contentuser h2 {
+  width: 0;
+  opacity: 0;
+  transform: translateX(-8px);
+  pointer-events: none;
+}
+
+.sidebar a {
+  color: #dbeafe;
+}
+
+.sidebar .navSidebar nav {
+  gap: 0.45rem;
+  margin-top: 0.25rem;
+}
+
+.sidebar .navSidebar nav a {
+  display: block;
+  padding: 0;
+  border-radius: 8px;
+  color: #cbd5e1;
+  text-decoration: none;
+}
+
+.sidebar .navSidebar nav a div {
+  min-height: 44px;
+  padding: 0 0.85rem;
+  border-radius: 8px;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.sidebar .navSidebar nav a svg {
+  flex-shrink: 0;
+  color: #94a3b8;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.sidebar .navSidebar nav a p {
+  color: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.sidebar .navSidebar nav a:hover {
+  padding: 0;
+  background: transparent;
+}
+
+.sidebar .navSidebar nav a:hover div {
+  color: #ffffff;
+  background: rgba(103, 232, 249, 0.12);
+  transform: translateX(3px);
+}
+
+.sidebar .navSidebar nav a:hover svg {
+  color: #67e8f9;
+}
+
+.sidebarCollapsed .navSidebar nav a div {
+  justify-content: center;
+  padding-inline: 0;
+}
+
+.sidebarCollapsed .navSidebar nav a:hover div {
+  transform: translateY(-1px);
+}
+
+.exit {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  min-height: 46px;
+  margin-top: 1rem;
+  padding: 0 0.85rem;
+  border-radius: 8px;
+  color: #fecaca;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.exit svg {
+  flex-shrink: 0;
+}
+
+.exit h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  white-space: nowrap;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    width 0.2s ease;
+}
+
+.exit:hover {
+  color: #ffffff;
+  background: rgba(248, 113, 113, 0.16);
+  transform: translateY(-1px);
+}
+
+.sidebarCollapsed .exit {
+  justify-content: center;
+  padding-inline: 0;
+}
+
+.sidebarCollapsed .exit h3 {
+  width: 0;
+  opacity: 0;
+  transform: translateX(-8px);
+  pointer-events: none;
+}
+
+@media (max-width: 760px) {
+  .sidebar {
+    width: 84px;
+    padding-inline: 0.65rem;
+  }
+
+  .contentuser,
+  .exit {
+    justify-content: center;
+    padding-inline: 0;
+  }
+
+  .contentuser h2,
+  .exit h3 {
+    width: 0;
+    opacity: 0;
+    transform: translateX(-8px);
+    pointer-events: none;
+  }
+
+  .sidebar .navSidebar nav a div {
+    justify-content: center;
+    padding-inline: 0;
+  }
 }
