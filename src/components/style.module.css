@@ -90,12 +90,19 @@
     gap: 1rem;
 
     background-color: #eeeeeea4;
-    width: 300px;
-    padding: 1rem;
+    width: 430px;
+    padding: 3rem;
     border-radius: 16px;
+    cursor: pointer;
+        transition: all 0.2s;
 
     div {
         display: flex;
         justify-content: space-between;
+    }
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 0 7px rgb(192, 192, 192);
     }
 }
