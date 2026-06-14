@@ -1,40 +1,53 @@
 import { Link } from "react-router-dom";
-import styles from './style.module.css'
-import { FaBook, FaHome, FaSwatchbook } from "react-icons/fa";
-import { IoSettingsSharp } from "react-icons/io5";
+import { FaBook, FaHome } from "react-icons/fa";
+import { IoChevronDown, IoSettingsSharp } from "react-icons/io5";
+import styles from "./style.module.css";
 
 interface NavbarProps {
-    expandMenu: boolean
+    expandMenu: boolean;
 }
 
 export default function Navbar({ expandMenu }: NavbarProps) {
     return (
         <>
             <nav className={`${styles.options} ${expandMenu ? styles.navbarCollapsed : ''}`}>
-                <Link to="/dashboard">
+                <Link to="/dashboard" className={styles.navItem}>
                     <div>
                         <FaHome />
                         <p>Home</p>
                     </div>
                 </Link>
-                <Link to="/dashboard/best-books">
-                    <div>
-                        <FaBook  />
-                        <p>Book</p>
+
+                <details className={styles.navGroup}>
+                    <summary className={styles.navSummary}>
+                        <div>
+                            <FaBook />
+                            <p>Book</p>
+                        </div>
+                        <IoChevronDown className={styles.chevron} />
+                    </summary>
+
+                    <div className={styles.subMenu}>
+                        <Link to="/dashboard/my-bookcase">Meus livros</Link>
+                        <Link to="/dashboard/register-book">Cadastrar livros</Link>
+                        <Link to="/dashboard/best-books">Ranking da semana</Link>
                     </div>
-                </Link>
-                <Link to="/dashboard/my-bookcase">
-                    <div>
-                        <FaSwatchbook  />
-                        <p>My Books</p>
+                </details>
+
+                <details className={styles.navGroup}>
+                    <summary className={styles.navSummary}>
+                        <div>
+                            <IoSettingsSharp />
+                            <p>Settings</p>
+                        </div>
+                        <IoChevronDown className={styles.chevron} />
+                    </summary>
+
+                    <div className={styles.subMenu}>
+                        <Link to="/dashboard/config/my-settings">Minhas configuracoes</Link>
+                        <Link to="/dashboard/config/system">Configuracoes do sistema</Link>
                     </div>
-                </Link>
-                <Link to="/dashboard/config">
-                    <div>
-                        <IoSettingsSharp  />
-                        <p>Settings</p>
-                    </div>
-                </Link>
+                </details>
             </nav>
         </>
     )
