@@ -83,7 +83,7 @@ export default function LadingPage() {
 
           <div className={style.heroActions}>
             <Link to="/register" className={style.primaryAction}>
-              Comecar agora
+              Começar agora
             </Link>
             <a href="#features" className={style.secondaryAction}>
               Ver recursos

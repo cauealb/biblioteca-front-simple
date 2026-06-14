@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import styles from './style.module.css'
+import PrimaryAction from './PrimaryAction'
 
 interface ModalYesOrNoProps {
     header: string,
@@ -20,7 +21,9 @@ export default function ModalYesOrNo({ header, question, modalOpen, isClose }: M
                         <Link to="/">
                             <button className={styles.btnYes}>Sim</button>
                         </Link>
-                        <button className={styles.buttonPurple} onClick={isClose}>Não</button>
+                        <div onClick={isClose}>
+                            <PrimaryAction title='Não' />
+                        </div>
                     </div>
                 </div>
             </div>
