@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import style from './style.module.css'
 
 interface APIProps {
@@ -42,10 +42,20 @@ export default function DashboardsBooksPages() {
     const [textBook, setTextBook] = useState<string>('');
     const [listBookSearch, setListBookSearch] = useState<APIProps[]>([])
 
+    useEffect(() => {
+        setListBookSearch(arr)
+    }, [])
+
     function handleTextChangedSearchBook(value: string) {
         setTextBook(value)
-
-        setListBookSearch(arr)
+        
+        if(value === '') {
+            setListBookSearch(arr)
+        } else {
+            let filterArr = arr.filter(book => book.name.toLocaleLowerCase().includes(value.toLocaleLowerCase()))
+            setListBookSearch(filterArr)
+        }
+        console.log(value)
     }
 
     return (
