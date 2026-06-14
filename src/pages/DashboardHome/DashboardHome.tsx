@@ -10,30 +10,30 @@ export default function DashboardHome() {
                 </header>
 
                 <div className={style.metrics}>
-                    <article>
+                    <article className={style.panel}>
                         <h2>128</h2>
                         <p>Total</p>
                     </article>
 
-                    <article>
+                    <article className={style.panel}>
                         <h2>74</h2>
                         <p>Lidos</p>
                     </article>
 
-                    <article>
+                    <article className={style.panel}>
                         <h2>12</h2>
                         <p>Lendo</p>
                     </article>
                 </div>
 
-                <div>
-                    <header>
+                <div className={style.panel}>
+                    <header className={style.columns}>
                         <p>#</p>
                         <p>Livro</p>
                         <p>Status</p>
                     </header>
 
-                    <div>
+                    <div className={style.dataBook}>
                         <div>
                             <p>01</p>
                             <p>Domain-Driven Design</p>
@@ -42,7 +42,7 @@ export default function DashboardHome() {
 
                         <div>
                             <p>02</p>
-                            <p>A Metamorfose</p>
+                            <p>Domain-Driven Design</p>
                             <p>Lido</p>
                         </div>
 
