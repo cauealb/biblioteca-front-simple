@@ -1,3 +1,4 @@
+import StatusBook from '../../components/StatusBook'
 import style from './style.module.css'
 
 export default function DashboardHome() {
@@ -37,19 +38,19 @@ export default function DashboardHome() {
                         <div>
                             <p>01</p>
                             <p>Domain-Driven Design</p>
-                            <p>Lendo</p>
+                            <StatusBook status='Lendo' />
                         </div>
 
                         <div>
                             <p>02</p>
                             <p>Domain-Driven Design</p>
-                            <p>Lido</p>
+                            <StatusBook status='Lido' />
                         </div>
 
                         <div>
                             <p>03</p>
                             <p>Verity</p>
-                            <p>Pendente</p>
+                            <StatusBook status='Pendente' />
                         </div>
                     </div>
                     

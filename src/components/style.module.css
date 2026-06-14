@@ -149,3 +149,28 @@
 .primaryAction:hover {
   transform: translateY(-2px);
 }
+
+.status {
+    display: inline;
+    width: fit-content;
+    padding: 0.2rem 0.5rem;
+    border-radius: 16px;
+    background-color: #4f46e5;
+    font-size: 0.8rem;
+    font-weight: 900;
+}
+
+.statusRead {
+    color: #167e3c;
+    background-color: #22c55e6e;
+}
+
+.statusReading {
+    color: #6e4c11;
+    background-color: #f59f0ba6;
+}
+
+.statusUnread {
+    color: #802a1a;
+    background-color: #e05138d8;
+}
