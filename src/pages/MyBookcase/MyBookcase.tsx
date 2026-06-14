@@ -1,3 +1,4 @@
+import { FaCircle } from 'react-icons/fa'
 import CardBook, { type CardBookProps } from '../../components/CardBook'
 import style from './style.module.css'
 
@@ -96,6 +97,23 @@ export default function MyBookcase() {
                         />
                     ))}
                 </div>
+
+                <footer className={style.ftDescription}>
+                    <div>
+                        <FaCircle color='orange' />
+                        <p>Lendo</p>
+                    </div>
+
+                    <div>
+                        <FaCircle color='green' />
+                        <p>Já lido</p>
+                    </div>
+
+                    <div>
+                        <FaCircle color='red' />
+                        <p>Pendente para ler</p>
+                    </div>
+                </footer>
             </div>
         </>
     )
