@@ -1,15 +1,17 @@
-import style from './style.module.css'
-import { GoArrowRight } from 'react-icons/go'
+import { GoArrowRight } from "react-icons/go";
+import style from "./style.module.css";
 
 interface GetStartedProps {
-    title: string
+  title: string;
 }
 
-export function ButtonCta({title}: GetStartedProps) {
-    return (
-        <button className={style.style}>
-            {title}
-            <span><GoArrowRight /></span>
-        </button>
-    )
+export function ButtonCta({ title }: GetStartedProps) {
+  return (
+    <button className={style.button} type="button">
+      {title}
+      <span>
+        <GoArrowRight />
+      </span>
+    </button>
+  );
 }
