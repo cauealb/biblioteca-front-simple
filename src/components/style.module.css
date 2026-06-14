@@ -83,3 +83,19 @@
         box-shadow: 0px 0px 7px rgba(131, 131, 131, 0.61);
     }
 }
+
+.cardBook {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    background-color: #eeeeeea4;
+    width: 300px;
+    padding: 1rem;
+    border-radius: 16px;
+
+    div {
+        display: flex;
+        justify-content: space-between;
+    }
+}
