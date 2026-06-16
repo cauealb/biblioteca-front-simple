@@ -1,4 +1,5 @@
 import PrimaryAction from '../../components/PrimaryAction'
+import StatusBook from '../../components/StatusBook'
 import style from './style.module.css'
 
 export default function CreateBook() {
@@ -11,7 +12,7 @@ export default function CreateBook() {
                 </header>
 
                 <div className={style.containerInputs}>
-                    <div className={`${style.inputs} ${style.panel}`}>
+                    <form className={`${style.inputs} ${style.panel}`}>
                         <label>
                             Book name:
                             <input type="text" placeholder='Harry Potter' />
@@ -53,10 +54,31 @@ export default function CreateBook() {
                             </button>
                             <PrimaryAction title='Salvar livro'/>
                         </footer>
-                    </div>
+                    </form>
 
                     <div className={`${style.listBooks} ${style.panel}`}>
                         <h4>Livros criados</h4>
+
+                        <div className={style.list}>
+                            <div className={style.bookCreated}>
+                                <div className={style.logoBook}></div>
+                                <div>
+                                    <h3>Clean Code</h3>
+                                    <p>Robert C. Martin</p>
+                                    <StatusBook status='Lendo' />
+                                </div>
+                            </div>
+
+                            <div className={style.bookCreated}>
+                                <div className={style.logoBook}></div>
+                                <div>
+                                    <h3>Clean Code</h3>
+                                    <p>Robert C. Martin</p>
+                                    <StatusBook status='Lendo' />
+                                </div>
+                            </div>
+                            
+                        </div>
                     </div>
                 </div>
                 

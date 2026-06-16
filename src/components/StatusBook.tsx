@@ -1,7 +1,7 @@
 import style from './style.module.css'
 
 interface StatusBookProps {
-    status: string
+    status: 'Lido' | 'Pendente' | 'Lendo'
 }
 
 export default function StatusBook({ status }: StatusBookProps) {
