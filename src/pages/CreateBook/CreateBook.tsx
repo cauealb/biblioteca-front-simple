@@ -79,6 +79,11 @@ export default function CreateBook() {
                             </div>
                             
                         </div>
+
+                        <div className={style.statusCreate}>
+                            <p>Livro adicionado com sucesso</p>
+                            <p>Ok</p>
+                        </div>
                     </div>
                 </div>
                 

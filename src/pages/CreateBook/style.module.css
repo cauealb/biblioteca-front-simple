@@ -82,3 +82,19 @@
     background: linear-gradient(15deg, #4f46e5,#7c3aed);
     border-radius: 10px;
 }
+
+.statusCreate {
+    background-color: rgb(221, 253, 221);
+    border: 2px solid green;
+    border-radius: 8px;
+    padding: 0.8rem;
+    color: green;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: space-between;
+
+    & > p:last-child {
+        cursor: pointer;
+    }
+}
