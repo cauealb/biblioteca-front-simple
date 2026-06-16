@@ -7,6 +7,7 @@ import DashboardPages from "../pages/Dashboard/DashboardPages";
 import DashboardsBooksPages from "../pages/DashboardBooks/DashboardsBooksPages";
 import MyBookcase from "../pages/MyBookcase/MyBookcase";
 import DashboardHome from "../pages/DashboardHome/DashboardHome";
+import CreateBook from "../pages/CreateBook/CreateBook";
 
 export function AppRoutes() {
   return (
@@ -30,6 +31,11 @@ export function AppRoutes() {
           <Route 
             path="my-bookcase"
             element={<MyBookcase />}
+          />
+
+          <Route 
+            path="create-book"
+            element={<CreateBook />}
           />
         </Route>
       </Routes>

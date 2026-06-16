@@ -29,7 +29,7 @@ export default function Navbar({ expandMenu }: NavbarProps) {
 
                     <div className={styles.subMenu}>
                         <Link to="/dashboard/my-bookcase">Meus livros</Link>
-                        <Link to="/dashboard/register-book">Cadastrar livros</Link>
+                        <Link to="/dashboard/create-book">Cadastrar livros</Link>
                         <Link to="/dashboard/best-books">Ranking da semana</Link>
                     </div>
                 </details>
