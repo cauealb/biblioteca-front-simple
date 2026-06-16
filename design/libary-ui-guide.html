@@ -616,6 +616,369 @@
         margin-top: 16px;
       }
 
+      .flow-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+      }
+
+      .wide-screen {
+        grid-column: 1 / -1;
+      }
+
+      .form-preview,
+      .manage-preview,
+      .storage-preview,
+      .context-preview {
+        min-height: 460px;
+        padding: 18px;
+        color: #0f172a;
+        background: #f8fafc;
+      }
+
+      .preview-topbar {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 16px;
+      }
+
+      .preview-topbar h3 {
+        font-size: 24px;
+      }
+
+      .preview-topbar p {
+        margin-top: 3px;
+        color: #64748b;
+        font-size: 12px;
+      }
+
+      .form-layout {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 14px;
+      }
+
+      .form-panel,
+      .list-panel,
+      .info-panel,
+      .code-panel,
+      .confirm-panel {
+        border: 1px solid #e2e8f0;
+        border-radius: var(--radius);
+        background: #fff;
+      }
+
+      .form-panel,
+      .list-panel,
+      .info-panel,
+      .code-panel {
+        padding: 14px;
+      }
+
+      .field-stack {
+        display: grid;
+        gap: 10px;
+      }
+
+      .field {
+        display: grid;
+        gap: 6px;
+      }
+
+      .field label {
+        color: #334155;
+        font-size: 11px;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .input-box,
+      .select-box,
+      .textarea-box {
+        display: flex;
+        align-items: center;
+        min-height: 38px;
+        padding: 0 11px;
+        border: 1px solid #e2e8f0;
+        border-radius: var(--radius);
+        color: #94a3b8;
+        background: #f8fafc;
+        font-size: 12px;
+      }
+
+      .textarea-box {
+        align-items: flex-start;
+        min-height: 74px;
+        padding-top: 10px;
+        line-height: 1.45;
+      }
+
+      .form-actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 8px;
+        margin-top: 14px;
+      }
+
+      .book-mini-list {
+        display: grid;
+        gap: 10px;
+      }
+
+      .book-mini {
+        display: grid;
+        grid-template-columns: 38px minmax(0, 1fr);
+        gap: 10px;
+        padding: 10px;
+        border: 1px solid #e2e8f0;
+        border-radius: var(--radius);
+        background: #f8fafc;
+      }
+
+      .cover-mini {
+        height: 52px;
+        border-radius: 6px;
+        background: linear-gradient(145deg, #67e8f9, #a78bfa);
+      }
+
+      .book-mini h4 {
+        margin: 0 0 4px;
+        font-size: 13px;
+      }
+
+      .book-mini p {
+        color: #64748b;
+        font-size: 11px;
+        line-height: 1.45;
+      }
+
+      .detail-preview {
+        position: relative;
+        min-height: 460px;
+        padding: 18px;
+        color: #0f172a;
+        background: #f8fafc;
+      }
+
+      .detail-modal {
+        width: min(430px, calc(100% - 32px));
+        border-radius: var(--radius);
+        background: #fff;
+        box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+      }
+
+      .detail-modal-cover {
+        min-height: 128px;
+        padding: 18px;
+        color: #fff;
+        background:
+          linear-gradient(135deg, rgba(16, 16, 18, 0.1), rgba(16, 16, 18, 0.55)),
+          linear-gradient(135deg, #67e8f9, #a78bfa);
+      }
+
+      .detail-modal-cover h3 {
+        max-width: 260px;
+        font-size: 26px;
+        line-height: 1.05;
+      }
+
+      .detail-modal-cover p {
+        margin-top: 8px;
+        color: rgba(255, 255, 255, 0.82);
+        font-size: 12px;
+      }
+
+      .detail-modal-body {
+        padding: 16px;
+      }
+
+      .detail-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin-bottom: 12px;
+      }
+
+      .detail-stat {
+        padding: 10px;
+        border: 1px solid #e2e8f0;
+        border-radius: var(--radius);
+        background: #f8fafc;
+      }
+
+      .detail-stat span {
+        display: block;
+        color: #64748b;
+        font-size: 10px;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .detail-stat strong {
+        display: block;
+        margin-top: 4px;
+        font-size: 13px;
+      }
+
+      .note-box {
+        padding: 12px;
+        border-radius: var(--radius);
+        color: #475569;
+        background: #f1f5f9;
+        font-size: 12px;
+        line-height: 1.55;
+      }
+
+      .manage-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 270px;
+        gap: 14px;
+      }
+
+      .action-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+        margin-top: 12px;
+      }
+
+      .icon-btn {
+        display: inline-grid;
+        place-items: center;
+        min-width: 32px;
+        height: 32px;
+        border: 1px solid #e2e8f0;
+        border-radius: var(--radius);
+        color: #475569;
+        background: #fff;
+        font-size: 12px;
+        font-weight: 900;
+      }
+
+      .icon-btn.danger {
+        color: #991b1b;
+        border-color: #fecaca;
+        background: #fef2f2;
+      }
+
+      .edit-form-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+
+      .edit-form-title h4,
+      .list-panel h4,
+      .info-panel h4,
+      .code-panel h4 {
+        margin: 0;
+        font-size: 15px;
+      }
+
+      .confirm-panel {
+        overflow: hidden;
+        margin-top: 12px;
+      }
+
+      .confirm-panel .confirm-body {
+        padding: 12px;
+      }
+
+      .confirm-panel h4 {
+        margin: 0 0 6px;
+        color: #991b1b;
+        font-size: 14px;
+      }
+
+      .confirm-panel p {
+        color: #64748b;
+        font-size: 12px;
+        line-height: 1.5;
+      }
+
+      .storage-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+
+      .toast {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 12px;
+        border: 1px solid #bbf7d0;
+        border-radius: var(--radius);
+        color: #166534;
+        background: #f0fdf4;
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      .code-line {
+        display: block;
+        padding: 8px 0;
+        border-bottom: 1px solid #e2e8f0;
+        color: #475569;
+        font-family: "Cascadia Code", "Fira Code", monospace;
+        font-size: 11px;
+      }
+
+      .code-line:last-child {
+        border-bottom: 0;
+      }
+
+      .context-map {
+        display: grid;
+        grid-template-columns: 1fr 28px 1fr 28px 1fr 1fr;
+        gap: 10px;
+        align-items: center;
+        margin-top: 12px;
+      }
+
+      .context-node {
+        min-height: 104px;
+        padding: 12px;
+        border: 1px solid #e2e8f0;
+        border-radius: var(--radius);
+        background: #fff;
+      }
+
+      .context-node.active {
+        border-color: #67e8f9;
+        background: #ecfeff;
+      }
+
+      .context-node strong {
+        display: block;
+        font-size: 14px;
+      }
+
+      .context-node span {
+        display: block;
+        margin-top: 8px;
+        color: #64748b;
+        font-size: 11px;
+        line-height: 1.45;
+      }
+
+      .arrow-chip {
+        display: grid;
+        place-items: center;
+        width: 28px;
+        height: 28px;
+        margin: 0 auto;
+        border-radius: 999px;
+        color: #06111f;
+        background: #67e8f9;
+        font-weight: 900;
+      }
+
       .ghost-btn,
       .solid-btn {
         padding: 10px 12px;
@@ -741,8 +1104,21 @@
 
         .tokens,
         .mock-grid,
+        .flow-grid,
+        .form-layout,
+        .manage-layout,
+        .storage-layout,
+        .context-map,
         .component-grid {
           grid-template-columns: 1fr;
+        }
+
+        .wide-screen {
+          grid-column: auto;
+        }
+
+        .arrow-chip {
+          transform: rotate(90deg);
         }
       }
 
@@ -766,6 +1142,23 @@
           grid-template-columns: 1fr;
         }
 
+        .preview-topbar,
+        .toolbar,
+        .dash-head {
+          display: grid;
+        }
+
+        .form-actions,
+        .modal-actions {
+          justify-content: stretch;
+        }
+
+        .ghost-btn,
+        .solid-btn,
+        .icon-btn {
+          text-align: center;
+        }
+
         .mini-links {
           display: none;
         }
@@ -787,6 +1180,7 @@
           <a href="#visao">Visao geral</a>
           <a href="#tokens">Design system</a>
           <a href="#telas">Telas</a>
+          <a href="#fluxo">Fluxo 02-06</a>
           <a href="#componentes">Componentes</a>
           <a href="#roadmap">Roadmap React</a>
           <a href="#regras">Regras de UI</a>
@@ -1068,6 +1462,311 @@
                       <div class="solid-btn">Marcar como lido</div>
                     </div>
                   </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="fluxo">
+          <div class="section-head">
+            <span class="eyebrow">Fluxo 02-06</span>
+            <h2>Layouts para cadastro, detalhes, edicao, filtros e estado global.</h2>
+            <p>
+              Estes frames mostram como as partes novas podem aparecer na interface.
+              Use como referencia visual e depois transforme em componentes React.
+            </p>
+          </div>
+
+          <div class="flow-grid">
+            <article class="mock-screen wide-screen">
+              <div class="mock-title">
+                <strong>02 Cadastro de livro</strong>
+                <span>BookForm + setBooks</span>
+              </div>
+              <div class="form-preview">
+                <div class="preview-topbar">
+                  <div>
+                    <h3>Cadastrar livro</h3>
+                    <p>Campos controlados para montar o objeto Book antes de salvar.</p>
+                  </div>
+                  <div class="pill-btn">Adicionar livro</div>
+                </div>
+                <div class="form-layout">
+                  <div class="form-panel">
+                    <div class="field-stack">
+                      <div class="field">
+                        <label>Titulo</label>
+                        <div class="input-box">Ex: O Programador Pragmatico</div>
+                      </div>
+                      <div class="field">
+                        <label>Autor</label>
+                        <div class="input-box">Ex: Andrew Hunt e David Thomas</div>
+                      </div>
+                      <div class="field">
+                        <label>Categoria</label>
+                        <div class="select-box">Programacao</div>
+                      </div>
+                      <div class="field">
+                        <label>Status</label>
+                        <div class="select-box">Quero ler</div>
+                      </div>
+                      <div class="field">
+                        <label>Notas</label>
+                        <div class="textarea-box">Anote uma frase curta sobre por que este livro entrou na lista.</div>
+                      </div>
+                    </div>
+                    <div class="form-actions">
+                      <div class="ghost-btn">Limpar</div>
+                      <div class="solid-btn">Salvar livro</div>
+                    </div>
+                  </div>
+                  <div class="list-panel">
+                    <h4>Previa da lista</h4>
+                    <p style="color: #64748b; font-size: 12px; margin: 4px 0 12px">
+                      Depois do submit, o novo item aparece aqui.
+                    </p>
+                    <div class="book-mini-list">
+                      <div class="book-mini">
+                        <div class="cover-mini"></div>
+                        <div>
+                          <h4>Clean Code</h4>
+                          <p>Robert C. Martin<br /><span class="status amber">Lendo</span></p>
+                        </div>
+                      </div>
+                      <div class="book-mini">
+                        <div class="cover-mini" style="background: linear-gradient(145deg, #22c55e, #67e8f9)"></div>
+                        <div>
+                          <h4>O Programador Pragmatico</h4>
+                          <p>Andrew Hunt e David Thomas<br /><span class="status red">Quero ler</span></p>
+                        </div>
+                      </div>
+                      <div class="toast">Livro adicionado com sucesso <span>OK</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="mock-screen">
+              <div class="mock-title">
+                <strong>03 Modal de detalhes</strong>
+                <span>selectedBook</span>
+              </div>
+              <div class="detail-preview">
+                <div class="preview-topbar">
+                  <div>
+                    <h3>Meus livros</h3>
+                    <p>Ao clicar no card, salve o livro em selectedBook.</p>
+                  </div>
+                </div>
+                <div class="book-grid">
+                  <div class="book-card">
+                    <h4>Domain-Driven Design</h4>
+                    <p>Eric Evans<br />Arquitetura</p>
+                    <span class="status amber">Lendo</span>
+                  </div>
+                  <div class="book-card">
+                    <h4>A Metamorfose</h4>
+                    <p>Franz Kafka<br />Literatura</p>
+                    <span class="status green">Lido</span>
+                  </div>
+                </div>
+                <div class="modal-overlay">
+                  <div class="detail-modal">
+                    <div class="detail-modal-cover">
+                      <h3>Domain-Driven Design</h3>
+                      <p>Livro selecionado no estado selectedBook.</p>
+                    </div>
+                    <div class="detail-modal-body">
+                      <div class="detail-grid">
+                        <div class="detail-stat">
+                          <span>Autor</span>
+                          <strong>Eric Evans</strong>
+                        </div>
+                        <div class="detail-stat">
+                          <span>Status</span>
+                          <strong>Lendo</strong>
+                        </div>
+                        <div class="detail-stat">
+                          <span>Categoria</span>
+                          <strong>Arquitetura</strong>
+                        </div>
+                        <div class="detail-stat">
+                          <span>Ano</span>
+                          <strong>2003</strong>
+                        </div>
+                      </div>
+                      <div class="note-box">
+                        Modal bom para mostrar descricao, notas pessoais e botoes de acao sem sair da lista.
+                      </div>
+                      <div class="modal-actions">
+                        <div class="ghost-btn">Fechar</div>
+                        <div class="solid-btn">Editar</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="mock-screen">
+              <div class="mock-title">
+                <strong>04 Editar, excluir e filtrar</strong>
+                <span>map + filter + confirmacao</span>
+              </div>
+              <div class="manage-preview">
+                <div class="preview-topbar">
+                  <div>
+                    <h3>Gerenciar acervo</h3>
+                    <p>Abas controlam o filtro por status.</p>
+                  </div>
+                </div>
+                <div class="tabs">
+                  <div class="tab active">Todos</div>
+                  <div class="tab">Lendo</div>
+                  <div class="tab">Lidos</div>
+                  <div class="tab">Quero ler</div>
+                </div>
+                <div class="manage-layout">
+                  <div>
+                    <div class="book-grid">
+                      <div class="book-card">
+                        <h4>Clean Architecture</h4>
+                        <p>Robert C. Martin<br />Programacao</p>
+                        <span class="status amber">Lendo</span>
+                        <div class="action-row">
+                          <div class="icon-btn">Ver</div>
+                          <div class="icon-btn">Editar</div>
+                          <div class="icon-btn danger">Excluir</div>
+                        </div>
+                      </div>
+                      <div class="book-card">
+                        <h4>Refactoring</h4>
+                        <p>Martin Fowler<br />Programacao</p>
+                        <span class="status green">Lido</span>
+                        <div class="action-row">
+                          <div class="icon-btn">Ver</div>
+                          <div class="icon-btn">Editar</div>
+                          <div class="icon-btn danger">Excluir</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="form-panel">
+                      <div class="edit-form-title">
+                        <h4>Editando livro</h4>
+                        <span class="status amber">Lendo</span>
+                      </div>
+                      <div class="field-stack">
+                        <div class="field">
+                          <label>Titulo</label>
+                          <div class="input-box">Clean Architecture</div>
+                        </div>
+                        <div class="field">
+                          <label>Status</label>
+                          <div class="select-box">Lido</div>
+                        </div>
+                      </div>
+                      <div class="form-actions">
+                        <div class="ghost-btn">Cancelar</div>
+                        <div class="solid-btn">Atualizar</div>
+                      </div>
+                    </div>
+                    <div class="confirm-panel">
+                      <div class="confirm-body">
+                        <h4>Confirmar exclusao?</h4>
+                        <p>Mostre esta confirmacao antes de usar filter para remover o livro.</p>
+                        <div class="form-actions">
+                          <div class="ghost-btn">Voltar</div>
+                          <div class="icon-btn danger">Excluir</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="mock-screen">
+              <div class="mock-title">
+                <strong>05 localStorage</strong>
+                <span>useEffect</span>
+              </div>
+              <div class="storage-preview">
+                <div class="preview-topbar">
+                  <div>
+                    <h3>Persistencia local</h3>
+                    <p>Feedback visual para mostrar que os livros continuam apos recarregar.</p>
+                  </div>
+                </div>
+                <div class="storage-layout">
+                  <div class="info-panel">
+                    <h4>Estado salvo</h4>
+                    <p style="color: #64748b; font-size: 12px; line-height: 1.55; margin: 8px 0 12px">
+                      Depois de cadastrar, editar ou excluir, mostre uma mensagem discreta.
+                    </p>
+                    <div class="toast">Alteracoes salvas no navegador <span>localStorage</span></div>
+                    <div style="height: 12px"></div>
+                    <div class="book-mini">
+                      <div class="cover-mini" style="background: linear-gradient(145deg, #f59e0b, #a78bfa)"></div>
+                      <div>
+                        <h4>Livros restaurados</h4>
+                        <p>3 itens carregados ao abrir a pagina.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="code-panel">
+                    <h4>Referencia visual do efeito</h4>
+                    <span class="code-line">useEffect(() =&gt; carregar livros, [])</span>
+                    <span class="code-line">useEffect(() =&gt; salvar livros, [books])</span>
+                    <span class="code-line">JSON.stringify(books)</span>
+                    <span class="code-line">JSON.parse(dadosSalvos)</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="mock-screen">
+              <div class="mock-title">
+                <strong>06 Context API + hook proprio</strong>
+                <span>BooksContext + useBooks</span>
+              </div>
+              <div class="context-preview">
+                <div class="preview-topbar">
+                  <div>
+                    <h3>Estado compartilhado</h3>
+                    <p>Uma tela para lembrar onde ficam dados e funcoes do acervo.</p>
+                  </div>
+                </div>
+                <div class="context-map">
+                  <div class="context-node active">
+                    <strong>BooksProvider</strong>
+                    <span>Envolve a aplicacao e guarda books, selectedBook e filtros.</span>
+                  </div>
+                  <div class="arrow-chip">></div>
+                  <div class="context-node">
+                    <strong>useBooks()</strong>
+                    <span>Hook proprio para consumir contexto sem repetir useContext.</span>
+                  </div>
+                  <div class="arrow-chip">></div>
+                  <div class="context-node">
+                    <strong>BookForm</strong>
+                    <span>Usa addBook e updateBook vindos do contexto.</span>
+                  </div>
+                  <div class="context-node">
+                    <strong>BookList</strong>
+                    <span>Usa books filtrados, deleteBook e setSelectedBook.</span>
+                  </div>
+                </div>
+                <div style="height: 14px"></div>
+                <div class="code-panel">
+                  <h4>O que o contexto deve expor</h4>
+                  <span class="code-line">books, selectedBook, activeStatus</span>
+                  <span class="code-line">addBook(book), updateBook(id, data)</span>
+                  <span class="code-line">deleteBook(id), selectBook(book), closeModal()</span>
+                  <span class="code-line">filteredBooks gerado a partir da aba ativa</span>
                 </div>
               </div>
             </article>
