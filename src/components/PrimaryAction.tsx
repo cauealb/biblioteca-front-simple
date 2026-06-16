@@ -2,10 +2,11 @@ import style from './style.module.css'
 
 interface ButtonPurpleProps {
     title: string
+    disable?: boolean
 }
 
-export default function PrimaryAction({ title }: ButtonPurpleProps) {
+export default function PrimaryAction({ title, disable = false }: ButtonPurpleProps) {
     return (
-        <button className={style.primaryAction}>{title}</button>
+        <button disabled={disable} className={style.primaryAction}>{title}</button>
     )
 }

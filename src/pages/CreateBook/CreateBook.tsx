@@ -1,8 +1,11 @@
+import { useEffect, useState } from 'react'
 import PrimaryAction from '../../components/PrimaryAction'
 import StatusBook from '../../components/StatusBook'
 import style from './style.module.css'
 
 export default function CreateBook() {
+    const [disableForm, setDisableForm] = useState<boolean>(true);
+
     return (
         <>
             <div className={style.container}>
@@ -15,22 +18,22 @@ export default function CreateBook() {
                     <form className={`${style.inputs} ${style.panel}`}>
                         <label>
                             Book name:
-                            <input type="text" placeholder='Harry Potter' />
+                            <input type="text" placeholder='Harry Potter' disabled={disableForm} />
                         </label>
 
                         <label>
                             Author name:
-                            <input type="text" placeholder='J. K. Rowling'  />
+                            <input type="text" placeholder='J. K. Rowling' disabled={disableForm}  />
                         </label>
 
                         <label>
                             Published:
-                            <input type="date" />
+                            <input type="date" disabled={disableForm} />
                         </label>
                         
                         <label>
                             Status
-                            <select>
+                            <select disabled={disableForm}>
                                 <option>Lendo</option>
                                 <option>Lido</option>
                                 <option>Pendente</option>
@@ -39,7 +42,7 @@ export default function CreateBook() {
 
                         <label>
                             Published:
-                            <select>
+                            <select disabled={disableForm}>
                                 <option>Programação</option>
                                 <option>Auto ajuda</option>
                                 <option>Romance</option>
@@ -49,10 +52,10 @@ export default function CreateBook() {
                             </select>
                         </label>
                         <footer className={style.footerBtn}>
-                            <button className={style.clear}>
+                            <button disabled={disableForm} className={style.clear}>
                                 Limpar
                             </button>
-                            <PrimaryAction title='Salvar livro'/>
+                            <PrimaryAction title='Salvar livro' disable={disableForm}/>
                         </footer>
                     </form>
 
