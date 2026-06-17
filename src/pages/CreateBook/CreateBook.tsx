@@ -1,17 +1,30 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import PrimaryAction from '../../components/PrimaryAction'
 import StatusBook from '../../components/StatusBook'
 import style from './style.module.css'
+import ModalAttention from '../../components/ModalAttention';
 
 export default function CreateBook() {
     const [disableForm, setDisableForm] = useState<boolean>(true);
+    const [disableCreateBook, setdisableCreateBook] = useState<boolean>(false)
+
+    function handleInitCreationBook() {
+        setdisableCreateBook(true)
+        setDisableForm(false)
+    }
 
     return (
         <>
             <div className={style.container}>
-                <header>
-                    <h1>Create your book</h1>
-                    <p>Simple and eazy create your book :)</p>
+                <header className={style.hero}>
+                    <div>
+                        <h1>Create your book</h1>
+                        <p>Simple and eazy create your book :)</p>
+                    </div>
+
+                    <div onClick={handleInitCreationBook}>
+                        <PrimaryAction title='Adicionar livro' disable={disableCreateBook} />
+                    </div>
                 </header>
 
                 <div className={style.containerInputs}>
@@ -89,8 +102,6 @@ export default function CreateBook() {
                         </div>
                     </div>
                 </div>
-                
-
             </div>
         </>
     )
