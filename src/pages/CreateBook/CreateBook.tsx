@@ -2,6 +2,7 @@ import { useState } from 'react'
 import PrimaryAction from '../../components/PrimaryAction'
 import StatusBook from '../../components/StatusBook'
 import style from './style.module.css'
+import { GiEruption } from 'react-icons/gi'
 
 interface FormBook {
     nameBook: string
@@ -28,16 +29,13 @@ export default function CreateBook() {
     const [publishedDate, setPublishedDate] = useState<Date>(new Date())
     const [status, setStatus] = useState<string>('')
     const [category, setCategory] = useState<string>('')
-    
+
+    const [errorForm, setErrorForm] = useState<boolean>(false)
     const [formBook, setFormBook] = useState<FormBook>(form)
 
     function handleInitCreationBook() {
         setDisableCreateBook(true)
         setDisableForm(false)
-    }
-
-    function resetFormBook() {
-        setFormBook(form)
     }
 
     function createBook(e: React.FormEvent) {
@@ -50,13 +48,28 @@ export default function CreateBook() {
             category: category 
         }
 
-        setFormBook(book)
+        if(validationForm()) {
+            setErrorForm(true)
+            return
+        }
 
-        resetFormBook()
+        setFormBook(book)
+        resetStates()
     }
 
     function validationForm() {
         return !disableForm && (nameBook === '' || authorBook === '' || publishedDate > new Date() || status === '' || category === '')
+    }
+
+    function resetStates() {
+        setNameBook('')
+        setAuthorBook('')
+        setPublishedDate(new Date())
+        setStatus('')
+        setCategory('')
+
+        setErrorForm(false)
+        setFormBook(form)
     }
 
     return (
@@ -145,7 +158,7 @@ export default function CreateBook() {
                                 <option>Estudo</option>
                             </select>
                         </label>
-                        {validationForm() ? <p className={style.formError}>Erro nos inputs do formulário.</p> : ''}
+                        {errorForm ? <p className={style.formError}>Erro nos inputs do formulário.</p> : ''}
                         <footer className={style.footerBtn}>
                             <button disabled={disableForm} className={style.clear}>
                                 Limpar
