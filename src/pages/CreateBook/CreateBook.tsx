@@ -2,15 +2,35 @@ import { useState } from 'react'
 import PrimaryAction from '../../components/PrimaryAction'
 import StatusBook from '../../components/StatusBook'
 import style from './style.module.css'
-import ModalAttention from '../../components/ModalAttention';
+
+interface FormBook {
+    nameBook: string
+    authorBook: string
+    publishedDate: Date
+    status: string
+    category: string
+}
+
+const form: FormBook = {
+    nameBook: '',
+    authorBook: '',
+    publishedDate: new Date(),
+    status: '',
+    category: ''
+}
 
 export default function CreateBook() {
     const [disableForm, setDisableForm] = useState<boolean>(true);
     const [disableCreateBook, setdisableCreateBook] = useState<boolean>(false)
+    const [formBook, setFormBook] = useState<FormBook>(form)
 
     function handleInitCreationBook() {
         setdisableCreateBook(true)
         setDisableForm(false)
+    }
+
+    function resetFormBook() {
+        setFormBook(form)
     }
 
     return (
@@ -54,7 +74,7 @@ export default function CreateBook() {
                         </label>
 
                         <label>
-                            Published:
+                            Category:
                             <select disabled={disableForm}>
                                 <option>Programação</option>
                                 <option>Auto ajuda</option>
