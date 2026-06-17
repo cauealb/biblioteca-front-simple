@@ -42,20 +42,21 @@ export default function CreateBook() {
 
     function createBook(e: React.FormEvent) {
         e.preventDefault()
+        const book: FormBook = {
+            nameBook: nameBook, 
+            authorBook: authorBook, 
+            publishedDate: publishedDate, 
+            status: status, 
+            category: category 
+        }
 
-        setFormBook(
-            {
-                nameBook: nameBook, 
-                authorBook: authorBook, 
-                publishedDate: publishedDate, 
-                status: status, 
-                category: category 
-            }
-        )
-
-        console.log(formBook)
+        setFormBook(book)
 
         resetFormBook()
+    }
+
+    function validationForm() {
+        return !disableForm && (nameBook === '' || authorBook === '' || publishedDate > new Date() || status === '' || category === '')
     }
 
     return (
@@ -81,6 +82,7 @@ export default function CreateBook() {
                                 name='bookName' 
                                 placeholder='Harry Potter' 
                                 disabled={disableForm}
+                                value={nameBook}
                                 autoComplete='off'
                                 onChange={e => setNameBook(e.target.value)} 
                             />
@@ -92,7 +94,8 @@ export default function CreateBook() {
                                 type="text" 
                                 name='authorName' 
                                 placeholder='J. K. Rowling' 
-                                disabled={disableForm}  
+                                disabled={disableForm} 
+                                value={authorBook} 
                                 autoComplete='off'
                                 onChange={e => setAuthorBook(e.target.value)}
                             />
@@ -104,6 +107,7 @@ export default function CreateBook() {
                                 type="date" 
                                 name='publishDate' 
                                 disabled={disableForm} 
+                                value={publishedDate.toString()}
                                 autoComplete='off'
                                 onChange={e => setPublishedDate(new Date(e.target.value))}
                             />
@@ -115,6 +119,7 @@ export default function CreateBook() {
                                 name='status' 
                                 disabled={disableForm}
                                 autoComplete='off'
+                                value={status}
                                 onChange={e => setStatus(e.target.value)}
                             >
                                 <option>Lendo</option>
@@ -129,6 +134,7 @@ export default function CreateBook() {
                                 name='category' 
                                 disabled={disableForm}
                                 autoComplete='off'
+                                value={category}
                                 onChange={e => setCategory(e.target.value)}
                             >
                                 <option>Programação</option>
@@ -139,6 +145,7 @@ export default function CreateBook() {
                                 <option>Estudo</option>
                             </select>
                         </label>
+                        {validationForm() ? <p className={style.formError}>Erro nos inputs do formulário.</p> : ''}
                         <footer className={style.footerBtn}>
                             <button disabled={disableForm} className={style.clear}>
                                 Limpar

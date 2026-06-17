@@ -236,6 +236,11 @@
     }
 }
 
+.formError {
+    font-size: 0.8rem;
+    color: red;
+}
+
 @media (max-width: 920px) {
     .containerInputs {
         grid-template-columns: 1fr;
