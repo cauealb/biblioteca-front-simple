@@ -21,16 +21,41 @@ const form: FormBook = {
 
 export default function CreateBook() {
     const [disableForm, setDisableForm] = useState<boolean>(true);
-    const [disableCreateBook, setdisableCreateBook] = useState<boolean>(false)
+    const [disableCreateBook, setDisableCreateBook] = useState<boolean>(false)
+
+    const [nameBook, setNameBook] = useState<string>('')
+    const [authorBook, setAuthorBook] = useState<string>('')
+    const [publishedDate, setPublishedDate] = useState<Date>(new Date())
+    const [status, setStatus] = useState<string>('')
+    const [category, setCategory] = useState<string>('')
+    
     const [formBook, setFormBook] = useState<FormBook>(form)
 
     function handleInitCreationBook() {
-        setdisableCreateBook(true)
+        setDisableCreateBook(true)
         setDisableForm(false)
     }
 
     function resetFormBook() {
         setFormBook(form)
+    }
+
+    function createBook(e: React.FormEvent) {
+        e.preventDefault()
+
+        setFormBook(
+            {
+                nameBook: nameBook, 
+                authorBook: authorBook, 
+                publishedDate: publishedDate, 
+                status: status, 
+                category: category 
+            }
+        )
+
+        console.log(formBook)
+
+        resetFormBook()
     }
 
     return (
@@ -48,25 +73,50 @@ export default function CreateBook() {
                 </header>
 
                 <div className={style.containerInputs}>
-                    <form className={`${style.inputs} ${style.panel}`}>
+                    <form className={`${style.inputs} ${style.panel}`} onSubmit={createBook}>
                         <label>
                             Book name:
-                            <input type="text" placeholder='Harry Potter' disabled={disableForm} />
+                            <input 
+                                type="text" 
+                                name='bookName' 
+                                placeholder='Harry Potter' 
+                                disabled={disableForm}
+                                autoComplete='off'
+                                onChange={e => setNameBook(e.target.value)} 
+                            />
                         </label>
 
                         <label>
                             Author name:
-                            <input type="text" placeholder='J. K. Rowling' disabled={disableForm}  />
+                            <input 
+                                type="text" 
+                                name='authorName' 
+                                placeholder='J. K. Rowling' 
+                                disabled={disableForm}  
+                                autoComplete='off'
+                                onChange={e => setAuthorBook(e.target.value)}
+                            />
                         </label>
 
                         <label>
                             Published:
-                            <input type="date" disabled={disableForm} />
+                            <input 
+                                type="date" 
+                                name='publishDate' 
+                                disabled={disableForm} 
+                                autoComplete='off'
+                                onChange={e => setPublishedDate(new Date(e.target.value))}
+                            />
                         </label>
                         
                         <label>
                             Status
-                            <select disabled={disableForm}>
+                            <select 
+                                name='status' 
+                                disabled={disableForm}
+                                autoComplete='off'
+                                onChange={e => setStatus(e.target.value)}
+                            >
                                 <option>Lendo</option>
                                 <option>Lido</option>
                                 <option>Pendente</option>
@@ -75,7 +125,12 @@ export default function CreateBook() {
 
                         <label>
                             Category:
-                            <select disabled={disableForm}>
+                            <select 
+                                name='category' 
+                                disabled={disableForm}
+                                autoComplete='off'
+                                onChange={e => setCategory(e.target.value)}
+                            >
                                 <option>Programação</option>
                                 <option>Auto ajuda</option>
                                 <option>Romance</option>
